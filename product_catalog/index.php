@@ -1,7 +1,7 @@
 <?php
 require('../model/database.php');
-require('../model/product_db.php');
-require('../model/category_db.php');
+require('../model/room_db.php');
+require('../model/Roomcategory_db.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
@@ -17,25 +17,25 @@ if ($action == 'list_products') {
     if ($category_id == NULL || $category_id == FALSE) {
         $category_id = 1;
     }
-    $categories = get_categories();
-    $category_name = get_category_name($category_id);
-    $products = get_products_by_category($category_id);
+    $roomcategories = get_categories();
+    $category_room = get_category_room($category_id);
+    $rooms = get_rooms_by_category($category_id);
 
-    include('product_list.php');
+    include('Room_list.php');
 } else if ($action == 'view_product') {
-    $product_id = filter_input(INPUT_GET, 'product_id', 
+    $room_id = filter_input(INPUT_GET, 'room_id', 
             FILTER_VALIDATE_INT);   
-    if ($product_id == NULL || $product_id == FALSE) {
+    if ($room_id == NULL || $room_id == FALSE) {
         $error = 'Missing or incorrect product id.';
         include('../errors/error.php');
     } else {
-        $categories = get_categories();
-        $product = get_product($product_id);
+        $roomcategories = get_categories();
+        $room = get_room($room_id);
 
         // Get product data
-        $code = $product['productCode'];
-        $name = $product['productName'];
-        $list_price = $product['listPrice'];
+        $Rnum = $room['roomNum'];
+        $Rname = $room['roomName'];
+        $Drate = $room['dalyRate'];
 
         // Calculate discounts
         $discount_percent = 30;  // 30% off for all web orders

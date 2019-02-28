@@ -4,7 +4,7 @@
     <h1>Menu</h1>
     <ul>
         <li>
-            <a href="product_manager">Product Manager</a>
+            <a href="room_manager">Room Manager</a>
         </li>
         <li>
             <a href="product_catalog">Product Catalog</a>
