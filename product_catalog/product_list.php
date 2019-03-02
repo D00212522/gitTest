@@ -11,7 +11,7 @@
             <!-- display links for products in selected category -->
             <?php foreach ($rooms as $room) : ?>
             <li>
-                <a href="?action=view_product&amp;product_id=<?php 
+                <a href="?action=view_product&amp;room_id=<?php 
                           echo $room['RoomID']; ?>">
                     <?php echo $room['roomName']; ?>
                 </a>

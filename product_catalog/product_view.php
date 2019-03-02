@@ -5,7 +5,7 @@
         <?php include '../view/Roomcategory_nav.php'; ?>
     </aside>
     <section>
-        <h1><?php echo $name; ?></h1>
+        <h1><?php echo $Cname; ?></h1>
         <div id="left_column">
             <p>
                 <img src="<?php echo $image_filename; ?>"
@@ -20,7 +20,7 @@
                  (You save $<?php echo $discount_amount_f; ?>)</p>
             <form action="<?php echo '../cart' ?>" method="post">
                 <input type="hidden" name="action" value="add">
-                <input type="hidden" name="product_id"
+                <input type="hidden" name="room_id"
                        value="<?php echo $product_id; ?>">
                 <b>Quantity:</b>
                 <input id="quantity" type="text" name="quantity" value="1" size="2">
