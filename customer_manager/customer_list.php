@@ -48,6 +48,9 @@
         </table>
         <p><a href="?action=show_add_form">Add customer</a></p>
         <p><a href="?action=list_customerdates ">List Dates</a></p>
+        <br>
+        
+         <p> <a href="../index.php">Menu</a></p>
     </section>
 
 </main>
