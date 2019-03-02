@@ -1,6 +1,6 @@
 <?php include '../view/header.php'; ?>
 <main>
-    <h1>Add Product</h1>
+    <h1>Add Room</h1>
     <form action="index.php" method="post" id="add_room_form">
         <input type="hidden" name="action" value="add_room">
 
@@ -31,7 +31,7 @@
         <br>
     </form>
     <p class="last_paragraph">
-        <a href="index.php?action=list_products">View rooms List</a>
+        <a href="index.php?action=list_Room">View rooms List</a>
     </p>
 
 </main>

@@ -7,11 +7,11 @@ $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action');
     if ($action == NULL) {
-        $action = 'list_products';
+        $action = 'list_Room';
     }
 }
 
-if ($action == 'list_products') {
+if ($action == 'list_Room') {
     // Get the current category ID
     $category_id = filter_input(INPUT_GET, 'category_id', 
             FILTER_VALIDATE_INT);
@@ -87,7 +87,7 @@ if ($action == 'list_products') {
         add_room($category_id, $Rnum, $Rname, $Drate);
         header("Location: .?category_id=$category_id");
     }
-} else if ($action == 'list_categories') {
+} else if ($action == 'list_Roomcategory') {
     $roomcategories = get_categories();
     include('Roomcategory_list.php');
 } else if ($action == 'add_category') {
@@ -99,12 +99,12 @@ if ($action == 'list_products') {
         include('../errors/error.php');
     } else {
         add_category($Cname);
-        header('Location: .?action=list_categories');  // display the Category List page
+        header('Location: .?action=list_Roomcategory');  // display the Category List page
     }
 } else if ($action == 'delete_category') {
     $category_id = filter_input(INPUT_POST, 'category_id', 
             FILTER_VALIDATE_INT);
     delete_category($category_id);
-    header('Location: .?action=list_categories');      // display the Category List page
+    header('Location: .?action=list_Roomcategory');      // display the Category List page
 }
 ?>

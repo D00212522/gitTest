@@ -32,7 +32,7 @@
         <input type="submit" value="Save Changes">
         <br>
     </form>
-    <p><a href="index.php?action=list_products">View Room List</a></p>
+    <p><a href="index.php?action=list_Room">View Room List</a></p>
 
 </main>
 <?php include '../view/footer.php'; ?>
