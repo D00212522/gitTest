@@ -1,4 +1,4 @@
-My Hotel Booking
+# My Hotel Booking
 
 my project consits of the booking descriptions of my hotel. On the first page I have the listing of each floor and the available rooms according to each floor. On the second page I have the categgory of dates. With each persons booking details.
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
